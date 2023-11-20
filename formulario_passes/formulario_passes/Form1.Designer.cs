@@ -32,6 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtNomeDaMãe = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEPPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmailPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefonePasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPFPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtRGPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtRAPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomePasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.txtArquivo = new System.Windows.Forms.TextBox();
             this.btnSelecionarArquivos = new System.Windows.Forms.Button();
@@ -68,6 +76,16 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtDataDeNascimentoPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtSemestrePasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataExpedicaoPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtCepPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomeMaePasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefonePasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpfPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtRGPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtRAPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomePasseNormal = new System.Windows.Forms.MaskedTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbtnRevalidacaoSptransPasseNormal = new System.Windows.Forms.RadioButton();
             this.rbtnCadastramentoSptransPasseNormal = new System.Windows.Forms.RadioButton();
@@ -98,25 +116,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.txtNomePasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtRAPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtRGPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtCpfPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefonePasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtNomeMaePasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtCepPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtNomePasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtRAPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtRGPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtCPFPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefonePasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtEmailPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtCEPPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtNomeDaMãe = new System.Windows.Forms.MaskedTextBox();
-            this.txtDataExpedicaoPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtSemestrePasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtCursoPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtDataDeNascimentoPasseNormal = new System.Windows.Forms.MaskedTextBox();
+            this.cbxCursoPasseNormal = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -187,6 +187,62 @@
             this.tabPage2.Text = "PASSE LIVRE ESCOLAR";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // txtNomeDaMãe
+            // 
+            this.txtNomeDaMãe.Location = new System.Drawing.Point(136, 243);
+            this.txtNomeDaMãe.Name = "txtNomeDaMãe";
+            this.txtNomeDaMãe.Size = new System.Drawing.Size(636, 20);
+            this.txtNomeDaMãe.TabIndex = 88;
+            // 
+            // txtCEPPasseLivre
+            // 
+            this.txtCEPPasseLivre.Location = new System.Drawing.Point(68, 215);
+            this.txtCEPPasseLivre.Name = "txtCEPPasseLivre";
+            this.txtCEPPasseLivre.Size = new System.Drawing.Size(175, 20);
+            this.txtCEPPasseLivre.TabIndex = 87;
+            // 
+            // txtEmailPasseLivre
+            // 
+            this.txtEmailPasseLivre.Location = new System.Drawing.Point(469, 147);
+            this.txtEmailPasseLivre.Name = "txtEmailPasseLivre";
+            this.txtEmailPasseLivre.Size = new System.Drawing.Size(305, 20);
+            this.txtEmailPasseLivre.TabIndex = 86;
+            // 
+            // txtTelefonePasseLivre
+            // 
+            this.txtTelefonePasseLivre.Location = new System.Drawing.Point(95, 150);
+            this.txtTelefonePasseLivre.Name = "txtTelefonePasseLivre";
+            this.txtTelefonePasseLivre.Size = new System.Drawing.Size(304, 20);
+            this.txtTelefonePasseLivre.TabIndex = 85;
+            // 
+            // txtCPFPasseLivre
+            // 
+            this.txtCPFPasseLivre.Location = new System.Drawing.Point(487, 112);
+            this.txtCPFPasseLivre.Name = "txtCPFPasseLivre";
+            this.txtCPFPasseLivre.Size = new System.Drawing.Size(284, 20);
+            this.txtCPFPasseLivre.TabIndex = 84;
+            // 
+            // txtRGPasseLivre
+            // 
+            this.txtRGPasseLivre.Location = new System.Drawing.Point(59, 85);
+            this.txtRGPasseLivre.Name = "txtRGPasseLivre";
+            this.txtRGPasseLivre.Size = new System.Drawing.Size(306, 20);
+            this.txtRGPasseLivre.TabIndex = 83;
+            // 
+            // txtRAPasseLivre
+            // 
+            this.txtRAPasseLivre.Location = new System.Drawing.Point(611, 18);
+            this.txtRAPasseLivre.Name = "txtRAPasseLivre";
+            this.txtRAPasseLivre.Size = new System.Drawing.Size(163, 20);
+            this.txtRAPasseLivre.TabIndex = 82;
+            // 
+            // txtNomePasseLivre
+            // 
+            this.txtNomePasseLivre.Location = new System.Drawing.Point(79, 18);
+            this.txtNomePasseLivre.Name = "txtNomePasseLivre";
+            this.txtNomePasseLivre.Size = new System.Drawing.Size(485, 20);
+            this.txtNomePasseLivre.TabIndex = 81;
             // 
             // label34
             // 
@@ -573,8 +629,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbxCursoPasseNormal);
             this.tabPage1.Controls.Add(this.txtDataDeNascimentoPasseNormal);
-            this.tabPage1.Controls.Add(this.txtCursoPasseNormal);
             this.tabPage1.Controls.Add(this.txtSemestrePasseNormal);
             this.tabPage1.Controls.Add(this.txtDataExpedicaoPasseNormal);
             this.tabPage1.Controls.Add(this.txtCepPasseNormal);
@@ -615,6 +671,86 @@
             this.tabPage1.Text = "PASSE ESCOLAR";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtDataDeNascimentoPasseNormal
+            // 
+            this.txtDataDeNascimentoPasseNormal.Location = new System.Drawing.Point(174, 120);
+            this.txtDataDeNascimentoPasseNormal.Mask = "00/00/0000";
+            this.txtDataDeNascimentoPasseNormal.Name = "txtDataDeNascimentoPasseNormal";
+            this.txtDataDeNascimentoPasseNormal.Size = new System.Drawing.Size(216, 20);
+            this.txtDataDeNascimentoPasseNormal.TabIndex = 59;
+            this.txtDataDeNascimentoPasseNormal.ValidatingType = typeof(System.DateTime);
+            this.txtDataDeNascimentoPasseNormal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDataDeNascimentoPasseNormal_MaskInputRejected);
+            // 
+            // txtSemestrePasseNormal
+            // 
+            this.txtSemestrePasseNormal.Location = new System.Drawing.Point(582, 53);
+            this.txtSemestrePasseNormal.Name = "txtSemestrePasseNormal";
+            this.txtSemestrePasseNormal.Size = new System.Drawing.Size(35, 20);
+            this.txtSemestrePasseNormal.TabIndex = 57;
+            // 
+            // txtDataExpedicaoPasseNormal
+            // 
+            this.txtDataExpedicaoPasseNormal.Location = new System.Drawing.Point(522, 87);
+            this.txtDataExpedicaoPasseNormal.Mask = "00/00/0000";
+            this.txtDataExpedicaoPasseNormal.Name = "txtDataExpedicaoPasseNormal";
+            this.txtDataExpedicaoPasseNormal.Size = new System.Drawing.Size(246, 20);
+            this.txtDataExpedicaoPasseNormal.TabIndex = 56;
+            this.txtDataExpedicaoPasseNormal.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtCepPasseNormal
+            // 
+            this.txtCepPasseNormal.Location = new System.Drawing.Point(65, 220);
+            this.txtCepPasseNormal.Mask = "00000\\-000";
+            this.txtCepPasseNormal.Name = "txtCepPasseNormal";
+            this.txtCepPasseNormal.Size = new System.Drawing.Size(175, 20);
+            this.txtCepPasseNormal.TabIndex = 55;
+            // 
+            // txtNomeMaePasseNormal
+            // 
+            this.txtNomeMaePasseNormal.Location = new System.Drawing.Point(133, 249);
+            this.txtNomeMaePasseNormal.Name = "txtNomeMaePasseNormal";
+            this.txtNomeMaePasseNormal.Size = new System.Drawing.Size(635, 20);
+            this.txtNomeMaePasseNormal.TabIndex = 54;
+            // 
+            // txtTelefonePasseNormal
+            // 
+            this.txtTelefonePasseNormal.Location = new System.Drawing.Point(92, 155);
+            this.txtTelefonePasseNormal.Name = "txtTelefonePasseNormal";
+            this.txtTelefonePasseNormal.Size = new System.Drawing.Size(304, 20);
+            this.txtTelefonePasseNormal.TabIndex = 53;
+            // 
+            // txtCpfPasseNormal
+            // 
+            this.txtCpfPasseNormal.Location = new System.Drawing.Point(447, 118);
+            this.txtCpfPasseNormal.Mask = "000.000.000\\-00";
+            this.txtCpfPasseNormal.Name = "txtCpfPasseNormal";
+            this.txtCpfPasseNormal.Size = new System.Drawing.Size(284, 20);
+            this.txtCpfPasseNormal.TabIndex = 52;
+            // 
+            // txtRGPasseNormal
+            // 
+            this.txtRGPasseNormal.Location = new System.Drawing.Point(56, 88);
+            this.txtRGPasseNormal.Mask = "00.000.000\\-0";
+            this.txtRGPasseNormal.Name = "txtRGPasseNormal";
+            this.txtRGPasseNormal.Size = new System.Drawing.Size(306, 20);
+            this.txtRGPasseNormal.TabIndex = 51;
+            // 
+            // txtRAPasseNormal
+            // 
+            this.txtRAPasseNormal.Location = new System.Drawing.Point(607, 26);
+            this.txtRAPasseNormal.Mask = "0000000000000";
+            this.txtRAPasseNormal.Name = "txtRAPasseNormal";
+            this.txtRAPasseNormal.Size = new System.Drawing.Size(164, 20);
+            this.txtRAPasseNormal.TabIndex = 50;
+            // 
+            // txtNomePasseNormal
+            // 
+            this.txtNomePasseNormal.Location = new System.Drawing.Point(69, 24);
+            this.txtNomePasseNormal.Name = "txtNomePasseNormal";
+            this.txtNomePasseNormal.Size = new System.Drawing.Size(492, 20);
+            this.txtNomePasseNormal.TabIndex = 49;
+            this.txtNomePasseNormal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.rbtnRevalidacaoSptransPasseNormal);
@@ -635,6 +771,7 @@
             this.rbtnRevalidacaoSptransPasseNormal.TabStop = true;
             this.rbtnRevalidacaoSptransPasseNormal.Text = "Revalidação";
             this.rbtnRevalidacaoSptransPasseNormal.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoSptransPasseNormal.CheckedChanged += new System.EventHandler(this.rbtnRevalidacaoSptransPasseNormal_CheckedChanged);
             // 
             // rbtnCadastramentoSptransPasseNormal
             // 
@@ -647,7 +784,7 @@
             this.rbtnCadastramentoSptransPasseNormal.TabStop = true;
             this.rbtnCadastramentoSptransPasseNormal.Text = "Cadastramento";
             this.rbtnCadastramentoSptransPasseNormal.UseVisualStyleBackColor = true;
-            this.rbtnCadastramentoSptransPasseNormal.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.rbtnCadastramentoSptransPasseNormal.CheckedChanged += new System.EventHandler(this.rbtnCadastramentoSptransPasseNormal_CheckedChanged);
             // 
             // panel1
             // 
@@ -669,6 +806,7 @@
             this.rbtnRevalidacaoEmtuPasseNormal.TabStop = true;
             this.rbtnRevalidacaoEmtuPasseNormal.Text = "Revalidação";
             this.rbtnRevalidacaoEmtuPasseNormal.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoEmtuPasseNormal.CheckedChanged += new System.EventHandler(this.rbtnRevalidacaoEmtuPasseNormal_CheckedChanged);
             // 
             // rbtnCadastramentoEmtuPasseNormal
             // 
@@ -681,7 +819,7 @@
             this.rbtnCadastramentoEmtuPasseNormal.TabStop = true;
             this.rbtnCadastramentoEmtuPasseNormal.Text = "Cadastramento";
             this.rbtnCadastramentoEmtuPasseNormal.UseVisualStyleBackColor = true;
-            this.rbtnCadastramentoEmtuPasseNormal.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtnCadastramentoEmtuPasseNormal.CheckedChanged += new System.EventHandler(this.rbtnCadastramentoEmtuPasseNormal_CheckedChanged);
             // 
             // label16
             // 
@@ -852,7 +990,6 @@
             this.label6.Size = new System.Drawing.Size(45, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "CPF:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -932,143 +1069,19 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // txtNomePasseNormal
+            // cbxCursoPasseNormal
             // 
-            this.txtNomePasseNormal.Location = new System.Drawing.Point(69, 24);
-            this.txtNomePasseNormal.Name = "txtNomePasseNormal";
-            this.txtNomePasseNormal.Size = new System.Drawing.Size(492, 20);
-            this.txtNomePasseNormal.TabIndex = 49;
-            this.txtNomePasseNormal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
-            // txtRAPasseNormal
-            // 
-            this.txtRAPasseNormal.Location = new System.Drawing.Point(607, 26);
-            this.txtRAPasseNormal.Mask = "0000000000000";
-            this.txtRAPasseNormal.Name = "txtRAPasseNormal";
-            this.txtRAPasseNormal.Size = new System.Drawing.Size(164, 20);
-            this.txtRAPasseNormal.TabIndex = 50;
-            // 
-            // txtRGPasseNormal
-            // 
-            this.txtRGPasseNormal.Location = new System.Drawing.Point(56, 88);
-            this.txtRGPasseNormal.Mask = "00.000.000\\-0";
-            this.txtRGPasseNormal.Name = "txtRGPasseNormal";
-            this.txtRGPasseNormal.Size = new System.Drawing.Size(306, 20);
-            this.txtRGPasseNormal.TabIndex = 51;
-            // 
-            // txtCpfPasseNormal
-            // 
-            this.txtCpfPasseNormal.Location = new System.Drawing.Point(447, 118);
-            this.txtCpfPasseNormal.Mask = "000.000.000\\-00";
-            this.txtCpfPasseNormal.Name = "txtCpfPasseNormal";
-            this.txtCpfPasseNormal.Size = new System.Drawing.Size(284, 20);
-            this.txtCpfPasseNormal.TabIndex = 52;
-            // 
-            // txtTelefonePasseNormal
-            // 
-            this.txtTelefonePasseNormal.Location = new System.Drawing.Point(92, 155);
-            this.txtTelefonePasseNormal.Name = "txtTelefonePasseNormal";
-            this.txtTelefonePasseNormal.Size = new System.Drawing.Size(304, 20);
-            this.txtTelefonePasseNormal.TabIndex = 53;
-            // 
-            // txtNomeMaePasseNormal
-            // 
-            this.txtNomeMaePasseNormal.Location = new System.Drawing.Point(133, 249);
-            this.txtNomeMaePasseNormal.Name = "txtNomeMaePasseNormal";
-            this.txtNomeMaePasseNormal.Size = new System.Drawing.Size(635, 20);
-            this.txtNomeMaePasseNormal.TabIndex = 54;
-            // 
-            // txtCepPasseNormal
-            // 
-            this.txtCepPasseNormal.Location = new System.Drawing.Point(65, 220);
-            this.txtCepPasseNormal.Mask = "00000\\-000";
-            this.txtCepPasseNormal.Name = "txtCepPasseNormal";
-            this.txtCepPasseNormal.Size = new System.Drawing.Size(175, 20);
-            this.txtCepPasseNormal.TabIndex = 55;
-            // 
-            // txtNomePasseLivre
-            // 
-            this.txtNomePasseLivre.Location = new System.Drawing.Point(79, 18);
-            this.txtNomePasseLivre.Name = "txtNomePasseLivre";
-            this.txtNomePasseLivre.Size = new System.Drawing.Size(485, 20);
-            this.txtNomePasseLivre.TabIndex = 81;
-            // 
-            // txtRAPasseLivre
-            // 
-            this.txtRAPasseLivre.Location = new System.Drawing.Point(611, 18);
-            this.txtRAPasseLivre.Name = "txtRAPasseLivre";
-            this.txtRAPasseLivre.Size = new System.Drawing.Size(163, 20);
-            this.txtRAPasseLivre.TabIndex = 82;
-            // 
-            // txtRGPasseLivre
-            // 
-            this.txtRGPasseLivre.Location = new System.Drawing.Point(59, 85);
-            this.txtRGPasseLivre.Name = "txtRGPasseLivre";
-            this.txtRGPasseLivre.Size = new System.Drawing.Size(306, 20);
-            this.txtRGPasseLivre.TabIndex = 83;
-            // 
-            // txtCPFPasseLivre
-            // 
-            this.txtCPFPasseLivre.Location = new System.Drawing.Point(487, 112);
-            this.txtCPFPasseLivre.Name = "txtCPFPasseLivre";
-            this.txtCPFPasseLivre.Size = new System.Drawing.Size(284, 20);
-            this.txtCPFPasseLivre.TabIndex = 84;
-            // 
-            // txtTelefonePasseLivre
-            // 
-            this.txtTelefonePasseLivre.Location = new System.Drawing.Point(95, 150);
-            this.txtTelefonePasseLivre.Name = "txtTelefonePasseLivre";
-            this.txtTelefonePasseLivre.Size = new System.Drawing.Size(304, 20);
-            this.txtTelefonePasseLivre.TabIndex = 85;
-            // 
-            // txtEmailPasseLivre
-            // 
-            this.txtEmailPasseLivre.Location = new System.Drawing.Point(469, 147);
-            this.txtEmailPasseLivre.Name = "txtEmailPasseLivre";
-            this.txtEmailPasseLivre.Size = new System.Drawing.Size(305, 20);
-            this.txtEmailPasseLivre.TabIndex = 86;
-            // 
-            // txtCEPPasseLivre
-            // 
-            this.txtCEPPasseLivre.Location = new System.Drawing.Point(68, 215);
-            this.txtCEPPasseLivre.Name = "txtCEPPasseLivre";
-            this.txtCEPPasseLivre.Size = new System.Drawing.Size(175, 20);
-            this.txtCEPPasseLivre.TabIndex = 87;
-            // 
-            // txtNomeDaMãe
-            // 
-            this.txtNomeDaMãe.Location = new System.Drawing.Point(136, 243);
-            this.txtNomeDaMãe.Name = "txtNomeDaMãe";
-            this.txtNomeDaMãe.Size = new System.Drawing.Size(636, 20);
-            this.txtNomeDaMãe.TabIndex = 88;
-            // 
-            // txtDataExpedicaoPasseNormal
-            // 
-            this.txtDataExpedicaoPasseNormal.Location = new System.Drawing.Point(522, 87);
-            this.txtDataExpedicaoPasseNormal.Name = "txtDataExpedicaoPasseNormal";
-            this.txtDataExpedicaoPasseNormal.Size = new System.Drawing.Size(246, 20);
-            this.txtDataExpedicaoPasseNormal.TabIndex = 56;
-            // 
-            // txtSemestrePasseNormal
-            // 
-            this.txtSemestrePasseNormal.Location = new System.Drawing.Point(582, 53);
-            this.txtSemestrePasseNormal.Name = "txtSemestrePasseNormal";
-            this.txtSemestrePasseNormal.Size = new System.Drawing.Size(35, 20);
-            this.txtSemestrePasseNormal.TabIndex = 57;
-            // 
-            // txtCursoPasseNormal
-            // 
-            this.txtCursoPasseNormal.Location = new System.Drawing.Point(76, 53);
-            this.txtCursoPasseNormal.Name = "txtCursoPasseNormal";
-            this.txtCursoPasseNormal.Size = new System.Drawing.Size(350, 20);
-            this.txtCursoPasseNormal.TabIndex = 58;
-            // 
-            // txtDataDeNascimentoPasseNormal
-            // 
-            this.txtDataDeNascimentoPasseNormal.Location = new System.Drawing.Point(174, 120);
-            this.txtDataDeNascimentoPasseNormal.Name = "txtDataDeNascimentoPasseNormal";
-            this.txtDataDeNascimentoPasseNormal.Size = new System.Drawing.Size(216, 20);
-            this.txtDataDeNascimentoPasseNormal.TabIndex = 59;
+            this.cbxCursoPasseNormal.FormattingEnabled = true;
+            this.cbxCursoPasseNormal.Items.AddRange(new object[] {
+            "Análise e Desenvolvimento de Sistemas",
+            "Comércio Exterior",
+            "Gestão da Produção Industrial",
+            "Logística Aeroportuária",
+            "Logística"});
+            this.cbxCursoPasseNormal.Location = new System.Drawing.Point(69, 52);
+            this.cbxCursoPasseNormal.Name = "cbxCursoPasseNormal";
+            this.cbxCursoPasseNormal.Size = new System.Drawing.Size(372, 21);
+            this.cbxCursoPasseNormal.TabIndex = 60;
             // 
             // Form1
             // 
@@ -1183,8 +1196,8 @@
         private System.Windows.Forms.MaskedTextBox txtCepPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtDataExpedicaoPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtDataDeNascimentoPasseNormal;
-        private System.Windows.Forms.MaskedTextBox txtCursoPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtSemestrePasseNormal;
+        private System.Windows.Forms.ComboBox cbxCursoPasseNormal;
     }
 }
 

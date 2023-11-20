@@ -19,6 +19,9 @@ namespace formulario_passes
             InitializeComponent();
         }
 
+        string cadastro;
+
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://buscacepinter.correios.com.br/app/endereco/index.php");
@@ -163,7 +166,7 @@ namespace formulario_passes
                 conexao.Open();
 
                 string query = "INSERT INTO FormularioMeia (Nome, RA, Curso, Semestre, RG, DataExpedicao, DataNascimento, CPF, Telefone, Email, NomeMae, Endereco, NumCasa, CEP, TipoPasse, TipoSolicitacao, Status, Obs) VALUES ";
-                query += $"('{txtNomePasseNormal.Text}', '{txtRAPasseNormal.Text}', '{txtCursoPasseNormal.Text}', '{txtSemestrePasseNormal.Text}', '{txtDataExpedicaoPasseNormal.Text}', '{txtDataDeNascimentoPasseNormal.Text}', '{txtCpfPasseNormal.Text}', '{txtTelefonePasseNormal.Text}', '{txtEmailPasseNormal.Text}', '{txtNomeMaePasseNormal.Text}', '{txtEnderecoPasseNormal.Text}', '{txtNPasseNormal.Text}', '{txtCepPasseNormal}', '', '', '', '', '')";
+                query += $"('{txtNomePasseNormal.Text}', '{txtRAPasseNormal.Text}', '{cbxCursoPasseNormal.Text}', '{txtSemestrePasseNormal.Text}', '{txtRGPasseNormal.Text}','{txtDataExpedicaoPasseNormal.Text}', '{txtDataDeNascimentoPasseNormal.Text}', '{txtCpfPasseNormal.Text}', '{txtTelefonePasseNormal.Text}', '{txtEmailPasseNormal.Text}', '{txtNomeMaePasseNormal.Text}', '{txtEnderecoPasseNormal.Text}', '{txtNPasseNormal.Text}', '{txtCepPasseNormal.Text}', 'Meia', '{cadastro}', '', '')";
                 OleDbCommand comando = new OleDbCommand(query, conexao);
                 comando.ExecuteNonQuery();
 
@@ -183,29 +186,48 @@ namespace formulario_passes
 
                 conexao.Close();
             }
-            catch (OverflowException ex)
-            {
-                // Trate a exceção aqui
-                MessageBox.Show("Ocorreu um overflow: " + ex.Message);
-
-            }
+          
             catch (Exception er)
             {
+              
                 MessageBox.Show("Erro! " + er.Message);
+                
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void rbtnCadastramentoEmtuPasseNormal_CheckedChanged(object sender, EventArgs e)
         {
-           
+            if(rbtnCadastramentoEmtuPasseNormal.Checked)
+            {
+                cadastro += "Cadastro EMTU ";
+            }
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void rbtnRevalidacaoEmtuPasseNormal_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rbtnRevalidacaoEmtuPasseNormal.Checked) 
+            {
+                cadastro += "Recadastramento EMTU ";
+            }
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void rbtnCadastramentoSptransPasseNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnCadastramentoSptransPasseNormal.Checked)
+            {
+                cadastro += "Cadastramento SPTRANS";
+            }
+        }
+
+        private void rbtnRevalidacaoSptransPasseNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnRevalidacaoSptransPasseNormal.Checked)
+            {
+                cadastro += "Revalidação SPTRANS";
+            }
+        }
+
+        private void txtDataDeNascimentoPasseNormal_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
