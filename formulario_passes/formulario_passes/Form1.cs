@@ -189,7 +189,10 @@ namespace formulario_passes
                 MessageBox.Show("Ocorreu um overflow: " + ex.Message);
 
             }
-            
+            catch (Exception er)
+            {
+                MessageBox.Show("Erro! " + er.Message);
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
