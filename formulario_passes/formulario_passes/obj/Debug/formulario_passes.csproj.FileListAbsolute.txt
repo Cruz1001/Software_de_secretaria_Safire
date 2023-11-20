@@ -1,0 +1,10 @@
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\bin\Debug\formulario_passes.exe.config
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\bin\Debug\formulario_passes.exe
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\bin\Debug\formulario_passes.pdb
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.AssemblyReference.cache
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.Form1.resources
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.Properties.Resources.resources
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.GenerateResource.cache
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.CoreCompileInputs.cache
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.exe
+C:\Users\Julia\Documents\formulario_passes\formulario_passes\obj\Debug\formulario_passes.pdb
