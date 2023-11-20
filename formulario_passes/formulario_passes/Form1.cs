@@ -8,6 +8,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace formulario_passes
 {
@@ -91,6 +92,119 @@ namespace formulario_passes
                     }
                 }
             }
+        }
+
+        private void txtArquivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nome2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nome1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cep1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnviarPasseNormal_Click(object sender, EventArgs e)
+        {
+            if (txtNomePasseNormal.Text == "")
+            {
+                MessageBox.Show("Preencha o nome");
+                txtNomePasseNormal.Focus();
+                return;
+            }
+            if (!txtRAPasseNormal.MaskCompleted)
+            {
+                MessageBox.Show("RA invalido");
+                txtRAPasseNormal.Focus();
+                return;
+            }
+            if (!txtRGPasseNormal.MaskCompleted)
+            {
+                MessageBox.Show("RG invalido");
+                txtRGPasseNormal.Focus();
+                return;
+            }
+            if (!txtCpfPasseNormal.MaskCompleted)
+            {
+                MessageBox.Show("CPF invalido");
+                txtCpfPasseNormal.Focus();
+                return;
+            }
+            if (!txtCepPasseNormal.MaskCompleted)
+            {
+                MessageBox.Show("CEP Invalido");
+                txtCepPasseNormal.Focus();
+                return;
+            }
+            try
+            {
+                string pasta = Application.StartupPath + @"\BD\BDSafire.accdb";
+                OleDbConnection conexao = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pasta);
+                conexao.Open();
+
+                string query = "INSERT INTO FormularioMeia (Nome, RA, Curso, Semestre, RG, DataExpedicao, DataNascimento, CPF, Telefone, Email, NomeMae, Endereco, NumCasa, CEP, TipoPasse, TipoSolicitacao, Status, Obs) VALUES ";
+                query += $"('{txtNomePasseNormal.Text}', '{txtRAPasseNormal.Text}', '{txtCursoPasseNormal.Text}', '{txtSemestrePasseNormal.Text}', '{txtDataExpedicaoPasseNormal.Text}', '{txtDataDeNascimentoPasseNormal.Text}', '{txtCpfPasseNormal.Text}', '{txtTelefonePasseNormal.Text}', '{txtEmailPasseNormal.Text}', '{txtNomeMaePasseNormal.Text}', '{txtEnderecoPasseNormal.Text}', '{txtNPasseNormal.Text}', '{txtCepPasseNormal}', '', '', '', '', '')";
+                OleDbCommand comando = new OleDbCommand(query, conexao);
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Dados gravados com sucesso");
+
+                txtNomePasseNormal.Text = "";
+                txtRAPasseNormal.Text = "";
+                txtDataExpedicaoPasseNormal.Text = "";
+                txtDataDeNascimentoPasseNormal.Text = "";
+                txtCpfPasseNormal.Text = "";
+                txtTelefonePasseNormal.Text = "";
+                txtEmailPasseNormal.Text = "";
+                txtNomeMaePasseNormal.Text = "";
+                txtEnderecoPasseNormal.Text = "";
+                txtNPasseNormal.Text = "";
+                txtCepPasseNormal.Text = "";
+
+                conexao.Close();
+            }
+            catch (OverflowException ex)
+            {
+                // Trate a exceção aqui
+                MessageBox.Show("Ocorreu um overflow: " + ex.Message);
+
+            }
+            
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
