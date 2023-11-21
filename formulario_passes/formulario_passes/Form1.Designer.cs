@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtNomeDaMãe = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomeMãePasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtCEPPasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtEmailPasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefonePasseLivre = new System.Windows.Forms.MaskedTextBox();
@@ -47,20 +47,18 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnPasseLivre = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbtnRevalidacaoSptrans = new System.Windows.Forms.RadioButton();
+            this.rbtnCadastroSptransPasseLivre = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rbtnRevalidacaoEMTUPasseLivre = new System.Windows.Forms.RadioButton();
+            this.rbtnCadastroEMTUPasseLivre = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.txtNPasseLivre = new System.Windows.Forms.TextBox();
             this.txtEnderecoPasseLivre = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.semestre2 = new System.Windows.Forms.ComboBox();
-            this.curso2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.cbxSemestrePasseLivre = new System.Windows.Forms.ComboBox();
+            this.cbxCursoPasseLivre = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -76,8 +74,8 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbxCursoPasseNormal = new System.Windows.Forms.ComboBox();
             this.txtDataDeNascimentoPasseNormal = new System.Windows.Forms.MaskedTextBox();
-            this.txtSemestrePasseNormal = new System.Windows.Forms.MaskedTextBox();
             this.txtDataExpedicaoPasseNormal = new System.Windows.Forms.MaskedTextBox();
             this.txtCepPasseNormal = new System.Windows.Forms.MaskedTextBox();
             this.txtNomeMaePasseNormal = new System.Windows.Forms.MaskedTextBox();
@@ -116,7 +114,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.cbxCursoPasseNormal = new System.Windows.Forms.ComboBox();
+            this.cbxSemestrePasseNormal = new System.Windows.Forms.ComboBox();
+            this.txtDataExpedicaoPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataNascimentoPasseLivre = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -140,7 +140,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.txtNomeDaMãe);
+            this.tabPage2.Controls.Add(this.txtDataNascimentoPasseLivre);
+            this.tabPage2.Controls.Add(this.txtDataExpedicaoPasseLivre);
+            this.tabPage2.Controls.Add(this.txtNomeMãePasseLivre);
             this.tabPage2.Controls.Add(this.txtCEPPasseLivre);
             this.tabPage2.Controls.Add(this.txtEmailPasseLivre);
             this.tabPage2.Controls.Add(this.txtTelefonePasseLivre);
@@ -161,10 +163,8 @@
             this.tabPage2.Controls.Add(this.linkLabel2);
             this.tabPage2.Controls.Add(this.txtNPasseLivre);
             this.tabPage2.Controls.Add(this.txtEnderecoPasseLivre);
-            this.tabPage2.Controls.Add(this.dateTimePicker3);
-            this.tabPage2.Controls.Add(this.semestre2);
-            this.tabPage2.Controls.Add(this.curso2);
-            this.tabPage2.Controls.Add(this.dateTimePicker4);
+            this.tabPage2.Controls.Add(this.cbxSemestrePasseLivre);
+            this.tabPage2.Controls.Add(this.cbxCursoPasseLivre);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label19);
@@ -188,16 +188,17 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // txtNomeDaMãe
+            // txtNomeMãePasseLivre
             // 
-            this.txtNomeDaMãe.Location = new System.Drawing.Point(136, 243);
-            this.txtNomeDaMãe.Name = "txtNomeDaMãe";
-            this.txtNomeDaMãe.Size = new System.Drawing.Size(636, 20);
-            this.txtNomeDaMãe.TabIndex = 88;
+            this.txtNomeMãePasseLivre.Location = new System.Drawing.Point(136, 243);
+            this.txtNomeMãePasseLivre.Name = "txtNomeMãePasseLivre";
+            this.txtNomeMãePasseLivre.Size = new System.Drawing.Size(636, 20);
+            this.txtNomeMãePasseLivre.TabIndex = 88;
             // 
             // txtCEPPasseLivre
             // 
             this.txtCEPPasseLivre.Location = new System.Drawing.Point(68, 215);
+            this.txtCEPPasseLivre.Mask = "00000\\-000";
             this.txtCEPPasseLivre.Name = "txtCEPPasseLivre";
             this.txtCEPPasseLivre.Size = new System.Drawing.Size(175, 20);
             this.txtCEPPasseLivre.TabIndex = 87;
@@ -219,6 +220,7 @@
             // txtCPFPasseLivre
             // 
             this.txtCPFPasseLivre.Location = new System.Drawing.Point(487, 112);
+            this.txtCPFPasseLivre.Mask = "000.000.000\\-00";
             this.txtCPFPasseLivre.Name = "txtCPFPasseLivre";
             this.txtCPFPasseLivre.Size = new System.Drawing.Size(284, 20);
             this.txtCPFPasseLivre.TabIndex = 84;
@@ -226,6 +228,7 @@
             // txtRGPasseLivre
             // 
             this.txtRGPasseLivre.Location = new System.Drawing.Point(59, 85);
+            this.txtRGPasseLivre.Mask = "00.000.000\\-00";
             this.txtRGPasseLivre.Name = "txtRGPasseLivre";
             this.txtRGPasseLivre.Size = new System.Drawing.Size(306, 20);
             this.txtRGPasseLivre.TabIndex = 83;
@@ -233,6 +236,7 @@
             // txtRAPasseLivre
             // 
             this.txtRAPasseLivre.Location = new System.Drawing.Point(611, 18);
+            this.txtRAPasseLivre.Mask = "0000000000000";
             this.txtRAPasseLivre.Name = "txtRAPasseLivre";
             this.txtRAPasseLivre.Size = new System.Drawing.Size(163, 20);
             this.txtRAPasseLivre.TabIndex = 82;
@@ -303,73 +307,77 @@
             this.btnPasseLivre.TabIndex = 73;
             this.btnPasseLivre.Text = "ENVIAR";
             this.btnPasseLivre.UseVisualStyleBackColor = true;
-            this.btnPasseLivre.Click += new System.EventHandler(this.button2_Click);
+            this.btnPasseLivre.Click += new System.EventHandler(this.btnPasseLivre_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.radioButton5);
-            this.panel3.Controls.Add(this.radioButton6);
+            this.panel3.Controls.Add(this.rbtnRevalidacaoSptrans);
+            this.panel3.Controls.Add(this.rbtnCadastroSptransPasseLivre);
             this.panel3.Location = new System.Drawing.Point(498, 303);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(276, 47);
             this.panel3.TabIndex = 72;
             // 
-            // radioButton5
+            // rbtnRevalidacaoSptrans
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(160, 13);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(113, 22);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Revalidação";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoSptrans.AutoSize = true;
+            this.rbtnRevalidacaoSptrans.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRevalidacaoSptrans.Location = new System.Drawing.Point(160, 13);
+            this.rbtnRevalidacaoSptrans.Name = "rbtnRevalidacaoSptrans";
+            this.rbtnRevalidacaoSptrans.Size = new System.Drawing.Size(113, 22);
+            this.rbtnRevalidacaoSptrans.TabIndex = 1;
+            this.rbtnRevalidacaoSptrans.TabStop = true;
+            this.rbtnRevalidacaoSptrans.Text = "Revalidação";
+            this.rbtnRevalidacaoSptrans.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoSptrans.CheckedChanged += new System.EventHandler(this.rbtnRevalidacaoSptrans_CheckedChanged);
             // 
-            // radioButton6
+            // rbtnCadastroSptransPasseLivre
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(3, 13);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(134, 22);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Cadastramento";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbtnCadastroSptransPasseLivre.AutoSize = true;
+            this.rbtnCadastroSptransPasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnCadastroSptransPasseLivre.Location = new System.Drawing.Point(3, 13);
+            this.rbtnCadastroSptransPasseLivre.Name = "rbtnCadastroSptransPasseLivre";
+            this.rbtnCadastroSptransPasseLivre.Size = new System.Drawing.Size(134, 22);
+            this.rbtnCadastroSptransPasseLivre.TabIndex = 0;
+            this.rbtnCadastroSptransPasseLivre.TabStop = true;
+            this.rbtnCadastroSptransPasseLivre.Text = "Cadastramento";
+            this.rbtnCadastroSptransPasseLivre.UseVisualStyleBackColor = true;
+            this.rbtnCadastroSptransPasseLivre.CheckedChanged += new System.EventHandler(this.rbtnCadastroSptransPasseLivre_CheckedChanged);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.radioButton7);
-            this.panel4.Controls.Add(this.radioButton8);
+            this.panel4.Controls.Add(this.rbtnRevalidacaoEMTUPasseLivre);
+            this.panel4.Controls.Add(this.rbtnCadastroEMTUPasseLivre);
             this.panel4.Location = new System.Drawing.Point(21, 303);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(276, 47);
             this.panel4.TabIndex = 71;
             // 
-            // radioButton7
+            // rbtnRevalidacaoEMTUPasseLivre
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(160, 13);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(113, 22);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Revalidação";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoEMTUPasseLivre.AutoSize = true;
+            this.rbtnRevalidacaoEMTUPasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRevalidacaoEMTUPasseLivre.Location = new System.Drawing.Point(160, 13);
+            this.rbtnRevalidacaoEMTUPasseLivre.Name = "rbtnRevalidacaoEMTUPasseLivre";
+            this.rbtnRevalidacaoEMTUPasseLivre.Size = new System.Drawing.Size(113, 22);
+            this.rbtnRevalidacaoEMTUPasseLivre.TabIndex = 1;
+            this.rbtnRevalidacaoEMTUPasseLivre.TabStop = true;
+            this.rbtnRevalidacaoEMTUPasseLivre.Text = "Revalidação";
+            this.rbtnRevalidacaoEMTUPasseLivre.UseVisualStyleBackColor = true;
+            this.rbtnRevalidacaoEMTUPasseLivre.CheckedChanged += new System.EventHandler(this.rbtnRevalidacaoEMTUPasseLivre_CheckedChanged);
             // 
-            // radioButton8
+            // rbtnCadastroEMTUPasseLivre
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(3, 13);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(134, 22);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Cadastramento";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbtnCadastroEMTUPasseLivre.AutoSize = true;
+            this.rbtnCadastroEMTUPasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnCadastroEMTUPasseLivre.Location = new System.Drawing.Point(3, 13);
+            this.rbtnCadastroEMTUPasseLivre.Name = "rbtnCadastroEMTUPasseLivre";
+            this.rbtnCadastroEMTUPasseLivre.Size = new System.Drawing.Size(134, 22);
+            this.rbtnCadastroEMTUPasseLivre.TabIndex = 0;
+            this.rbtnCadastroEMTUPasseLivre.TabStop = true;
+            this.rbtnCadastroEMTUPasseLivre.Text = "Cadastramento";
+            this.rbtnCadastroEMTUPasseLivre.UseVisualStyleBackColor = true;
+            this.rbtnCadastroEMTUPasseLivre.CheckedChanged += new System.EventHandler(this.rbtnCadastroEMTUPasseLivre_CheckedChanged);
             // 
             // label31
             // 
@@ -423,19 +431,11 @@
             this.txtEnderecoPasseLivre.Size = new System.Drawing.Size(394, 26);
             this.txtEnderecoPasseLivre.TabIndex = 60;
             // 
-            // dateTimePicker3
+            // cbxSemestrePasseLivre
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(176, 111);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(253, 22);
-            this.dateTimePicker3.TabIndex = 65;
-            // 
-            // semestre2
-            // 
-            this.semestre2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.semestre2.FormattingEnabled = true;
-            this.semestre2.Items.AddRange(new object[] {
+            this.cbxSemestrePasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSemestrePasseLivre.FormattingEnabled = true;
+            this.cbxSemestrePasseLivre.Items.AddRange(new object[] {
             "1° semestre/período",
             "2° semestre/período",
             "3° semestre/período",
@@ -446,33 +446,25 @@
             "8° semestre/período",
             "9° semestre/período",
             "10°  semestre/período"});
-            this.semestre2.Location = new System.Drawing.Point(582, 45);
-            this.semestre2.Name = "semestre2";
-            this.semestre2.Size = new System.Drawing.Size(190, 26);
-            this.semestre2.TabIndex = 57;
+            this.cbxSemestrePasseLivre.Location = new System.Drawing.Point(582, 45);
+            this.cbxSemestrePasseLivre.Name = "cbxSemestrePasseLivre";
+            this.cbxSemestrePasseLivre.Size = new System.Drawing.Size(190, 26);
+            this.cbxSemestrePasseLivre.TabIndex = 57;
             // 
-            // curso2
+            // cbxCursoPasseLivre
             // 
-            this.curso2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.curso2.FormattingEnabled = true;
-            this.curso2.Items.AddRange(new object[] {
+            this.cbxCursoPasseLivre.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCursoPasseLivre.FormattingEnabled = true;
+            this.cbxCursoPasseLivre.Items.AddRange(new object[] {
             "Análise e Desenvolvimento de Sistemas",
             "Comércio Exterior",
             "Gestão da Produção Industrial",
             "Logística",
             "Logística Aeroportuária"});
-            this.curso2.Location = new System.Drawing.Point(72, 44);
-            this.curso2.Name = "curso2";
-            this.curso2.Size = new System.Drawing.Size(357, 28);
-            this.curso2.TabIndex = 56;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(517, 82);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(257, 22);
-            this.dateTimePicker4.TabIndex = 55;
+            this.cbxCursoPasseLivre.Location = new System.Drawing.Point(72, 44);
+            this.cbxCursoPasseLivre.Name = "cbxCursoPasseLivre";
+            this.cbxCursoPasseLivre.Size = new System.Drawing.Size(357, 28);
+            this.cbxCursoPasseLivre.TabIndex = 56;
             // 
             // label17
             // 
@@ -629,9 +621,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbxSemestrePasseNormal);
             this.tabPage1.Controls.Add(this.cbxCursoPasseNormal);
             this.tabPage1.Controls.Add(this.txtDataDeNascimentoPasseNormal);
-            this.tabPage1.Controls.Add(this.txtSemestrePasseNormal);
             this.tabPage1.Controls.Add(this.txtDataExpedicaoPasseNormal);
             this.tabPage1.Controls.Add(this.txtCepPasseNormal);
             this.tabPage1.Controls.Add(this.txtNomeMaePasseNormal);
@@ -671,6 +663,20 @@
             this.tabPage1.Text = "PASSE ESCOLAR";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cbxCursoPasseNormal
+            // 
+            this.cbxCursoPasseNormal.FormattingEnabled = true;
+            this.cbxCursoPasseNormal.Items.AddRange(new object[] {
+            "Análise e Desenvolvimento de Sistemas",
+            "Comércio Exterior",
+            "Gestão da Produção Industrial",
+            "Logística Aeroportuária",
+            "Logística"});
+            this.cbxCursoPasseNormal.Location = new System.Drawing.Point(69, 52);
+            this.cbxCursoPasseNormal.Name = "cbxCursoPasseNormal";
+            this.cbxCursoPasseNormal.Size = new System.Drawing.Size(372, 21);
+            this.cbxCursoPasseNormal.TabIndex = 60;
+            // 
             // txtDataDeNascimentoPasseNormal
             // 
             this.txtDataDeNascimentoPasseNormal.Location = new System.Drawing.Point(174, 120);
@@ -680,13 +686,6 @@
             this.txtDataDeNascimentoPasseNormal.TabIndex = 59;
             this.txtDataDeNascimentoPasseNormal.ValidatingType = typeof(System.DateTime);
             this.txtDataDeNascimentoPasseNormal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDataDeNascimentoPasseNormal_MaskInputRejected);
-            // 
-            // txtSemestrePasseNormal
-            // 
-            this.txtSemestrePasseNormal.Location = new System.Drawing.Point(582, 53);
-            this.txtSemestrePasseNormal.Name = "txtSemestrePasseNormal";
-            this.txtSemestrePasseNormal.Size = new System.Drawing.Size(35, 20);
-            this.txtSemestrePasseNormal.TabIndex = 57;
             // 
             // txtDataExpedicaoPasseNormal
             // 
@@ -1069,19 +1068,42 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // cbxCursoPasseNormal
+            // cbxSemestrePasseNormal
             // 
-            this.cbxCursoPasseNormal.FormattingEnabled = true;
-            this.cbxCursoPasseNormal.Items.AddRange(new object[] {
-            "Análise e Desenvolvimento de Sistemas",
-            "Comércio Exterior",
-            "Gestão da Produção Industrial",
-            "Logística Aeroportuária",
-            "Logística"});
-            this.cbxCursoPasseNormal.Location = new System.Drawing.Point(69, 52);
-            this.cbxCursoPasseNormal.Name = "cbxCursoPasseNormal";
-            this.cbxCursoPasseNormal.Size = new System.Drawing.Size(372, 21);
-            this.cbxCursoPasseNormal.TabIndex = 60;
+            this.cbxSemestrePasseNormal.FormattingEnabled = true;
+            this.cbxSemestrePasseNormal.Items.AddRange(new object[] {
+            "1° semestre/período",
+            "2° semestre/período",
+            "3° semestre/período",
+            "4° semestre/período",
+            "5° semestre/período",
+            "6° semestre/período",
+            "7° semestre/período",
+            "8° semestre/período",
+            "9° semestre/período",
+            "10°  semestre/período"});
+            this.cbxSemestrePasseNormal.Location = new System.Drawing.Point(582, 52);
+            this.cbxSemestrePasseNormal.Name = "cbxSemestrePasseNormal";
+            this.cbxSemestrePasseNormal.Size = new System.Drawing.Size(189, 21);
+            this.cbxSemestrePasseNormal.TabIndex = 61;
+            // 
+            // txtDataExpedicaoPasseLivre
+            // 
+            this.txtDataExpedicaoPasseLivre.Location = new System.Drawing.Point(525, 84);
+            this.txtDataExpedicaoPasseLivre.Mask = "00/00/0000";
+            this.txtDataExpedicaoPasseLivre.Name = "txtDataExpedicaoPasseLivre";
+            this.txtDataExpedicaoPasseLivre.Size = new System.Drawing.Size(246, 20);
+            this.txtDataExpedicaoPasseLivre.TabIndex = 89;
+            this.txtDataExpedicaoPasseLivre.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDataNascimentoPasseLivre
+            // 
+            this.txtDataNascimentoPasseLivre.Location = new System.Drawing.Point(177, 114);
+            this.txtDataNascimentoPasseLivre.Mask = "00/00/0000";
+            this.txtDataNascimentoPasseLivre.Name = "txtDataNascimentoPasseLivre";
+            this.txtDataNascimentoPasseLivre.Size = new System.Drawing.Size(252, 20);
+            this.txtDataNascimentoPasseLivre.TabIndex = 90;
+            this.txtDataNascimentoPasseLivre.ValidatingType = typeof(System.DateTime);
             // 
             // Form1
             // 
@@ -1115,20 +1137,18 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnPasseLivre;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbtnRevalidacaoSptrans;
+        private System.Windows.Forms.RadioButton rbtnCadastroSptransPasseLivre;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rbtnRevalidacaoEMTUPasseLivre;
+        private System.Windows.Forms.RadioButton rbtnCadastroEMTUPasseLivre;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TextBox txtNPasseLivre;
         private System.Windows.Forms.TextBox txtEnderecoPasseLivre;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.ComboBox semestre2;
-        private System.Windows.Forms.ComboBox curso2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.ComboBox cbxSemestrePasseLivre;
+        private System.Windows.Forms.ComboBox cbxCursoPasseLivre;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1185,7 +1205,7 @@
         private System.Windows.Forms.MaskedTextBox txtRGPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtRAPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtNomePasseNormal;
-        private System.Windows.Forms.MaskedTextBox txtNomeDaMãe;
+        private System.Windows.Forms.MaskedTextBox txtNomeMãePasseLivre;
         private System.Windows.Forms.MaskedTextBox txtCEPPasseLivre;
         private System.Windows.Forms.MaskedTextBox txtEmailPasseLivre;
         private System.Windows.Forms.MaskedTextBox txtTelefonePasseLivre;
@@ -1196,8 +1216,10 @@
         private System.Windows.Forms.MaskedTextBox txtCepPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtDataExpedicaoPasseNormal;
         private System.Windows.Forms.MaskedTextBox txtDataDeNascimentoPasseNormal;
-        private System.Windows.Forms.MaskedTextBox txtSemestrePasseNormal;
         private System.Windows.Forms.ComboBox cbxCursoPasseNormal;
+        private System.Windows.Forms.ComboBox cbxSemestrePasseNormal;
+        private System.Windows.Forms.MaskedTextBox txtDataNascimentoPasseLivre;
+        private System.Windows.Forms.MaskedTextBox txtDataExpedicaoPasseLivre;
     }
 }
 
