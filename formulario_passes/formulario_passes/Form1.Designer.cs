@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtDataNascimentoPasseLivre = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataExpedicaoPasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtNomeMãePasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtCEPPasseLivre = new System.Windows.Forms.MaskedTextBox();
             this.txtEmailPasseLivre = new System.Windows.Forms.MaskedTextBox();
@@ -74,6 +76,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbxSemestrePasseNormal = new System.Windows.Forms.ComboBox();
             this.cbxCursoPasseNormal = new System.Windows.Forms.ComboBox();
             this.txtDataDeNascimentoPasseNormal = new System.Windows.Forms.MaskedTextBox();
             this.txtDataExpedicaoPasseNormal = new System.Windows.Forms.MaskedTextBox();
@@ -114,9 +117,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.cbxSemestrePasseNormal = new System.Windows.Forms.ComboBox();
-            this.txtDataExpedicaoPasseLivre = new System.Windows.Forms.MaskedTextBox();
-            this.txtDataNascimentoPasseLivre = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -188,6 +188,24 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // txtDataNascimentoPasseLivre
+            // 
+            this.txtDataNascimentoPasseLivre.Location = new System.Drawing.Point(177, 114);
+            this.txtDataNascimentoPasseLivre.Mask = "00/00/0000";
+            this.txtDataNascimentoPasseLivre.Name = "txtDataNascimentoPasseLivre";
+            this.txtDataNascimentoPasseLivre.Size = new System.Drawing.Size(252, 20);
+            this.txtDataNascimentoPasseLivre.TabIndex = 90;
+            this.txtDataNascimentoPasseLivre.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDataExpedicaoPasseLivre
+            // 
+            this.txtDataExpedicaoPasseLivre.Location = new System.Drawing.Point(525, 84);
+            this.txtDataExpedicaoPasseLivre.Mask = "00/00/0000";
+            this.txtDataExpedicaoPasseLivre.Name = "txtDataExpedicaoPasseLivre";
+            this.txtDataExpedicaoPasseLivre.Size = new System.Drawing.Size(246, 20);
+            this.txtDataExpedicaoPasseLivre.TabIndex = 89;
+            this.txtDataExpedicaoPasseLivre.ValidatingType = typeof(System.DateTime);
+            // 
             // txtNomeMãePasseLivre
             // 
             this.txtNomeMãePasseLivre.Location = new System.Drawing.Point(136, 243);
@@ -197,11 +215,12 @@
             // 
             // txtCEPPasseLivre
             // 
-            this.txtCEPPasseLivre.Location = new System.Drawing.Point(68, 215);
+            this.txtCEPPasseLivre.Location = new System.Drawing.Point(69, 182);
             this.txtCEPPasseLivre.Mask = "00000\\-000";
             this.txtCEPPasseLivre.Name = "txtCEPPasseLivre";
             this.txtCEPPasseLivre.Size = new System.Drawing.Size(175, 20);
             this.txtCEPPasseLivre.TabIndex = 87;
+            this.txtCEPPasseLivre.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCEPPasseLivre_MaskInputRejected);
             // 
             // txtEmailPasseLivre
             // 
@@ -405,7 +424,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(249, 222);
+            this.linkLabel2.Location = new System.Drawing.Point(250, 187);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(122, 15);
             this.linkLabel2.TabIndex = 68;
@@ -417,7 +436,7 @@
             // 
             this.txtNPasseLivre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNPasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNPasseLivre.Location = new System.Drawing.Point(612, 179);
+            this.txtNPasseLivre.Location = new System.Drawing.Point(612, 211);
             this.txtNPasseLivre.Name = "txtNPasseLivre";
             this.txtNPasseLivre.Size = new System.Drawing.Size(162, 26);
             this.txtNPasseLivre.TabIndex = 61;
@@ -426,7 +445,7 @@
             // 
             this.txtEnderecoPasseLivre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEnderecoPasseLivre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnderecoPasseLivre.Location = new System.Drawing.Point(184, 179);
+            this.txtEnderecoPasseLivre.Location = new System.Drawing.Point(187, 211);
             this.txtEnderecoPasseLivre.Name = "txtEnderecoPasseLivre";
             this.txtEnderecoPasseLivre.Size = new System.Drawing.Size(394, 26);
             this.txtEnderecoPasseLivre.TabIndex = 60;
@@ -471,7 +490,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(584, 184);
+            this.label17.Location = new System.Drawing.Point(587, 215);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(22, 18);
             this.label17.TabIndex = 54;
@@ -482,7 +501,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(18, 246);
+            this.label18.Location = new System.Drawing.Point(22, 246);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(111, 18);
             this.label18.TabIndex = 52;
@@ -493,18 +512,19 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(19, 215);
+            this.label19.Location = new System.Drawing.Point(19, 184);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(42, 18);
             this.label19.TabIndex = 51;
             this.label19.Text = "Cep:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(18, 184);
+            this.label20.Location = new System.Drawing.Point(21, 219);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(160, 18);
             this.label20.TabIndex = 50;
@@ -663,6 +683,25 @@
             this.tabPage1.Text = "PASSE ESCOLAR";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cbxSemestrePasseNormal
+            // 
+            this.cbxSemestrePasseNormal.FormattingEnabled = true;
+            this.cbxSemestrePasseNormal.Items.AddRange(new object[] {
+            "1° semestre/período",
+            "2° semestre/período",
+            "3° semestre/período",
+            "4° semestre/período",
+            "5° semestre/período",
+            "6° semestre/período",
+            "7° semestre/período",
+            "8° semestre/período",
+            "9° semestre/período",
+            "10°  semestre/período"});
+            this.cbxSemestrePasseNormal.Location = new System.Drawing.Point(582, 52);
+            this.cbxSemestrePasseNormal.Name = "cbxSemestrePasseNormal";
+            this.cbxSemestrePasseNormal.Size = new System.Drawing.Size(189, 21);
+            this.cbxSemestrePasseNormal.TabIndex = 61;
+            // 
             // cbxCursoPasseNormal
             // 
             this.cbxCursoPasseNormal.FormattingEnabled = true;
@@ -698,11 +737,12 @@
             // 
             // txtCepPasseNormal
             // 
-            this.txtCepPasseNormal.Location = new System.Drawing.Point(65, 220);
+            this.txtCepPasseNormal.Location = new System.Drawing.Point(63, 189);
             this.txtCepPasseNormal.Mask = "00000\\-000";
             this.txtCepPasseNormal.Name = "txtCepPasseNormal";
             this.txtCepPasseNormal.Size = new System.Drawing.Size(175, 20);
             this.txtCepPasseNormal.TabIndex = 55;
+            this.txtCepPasseNormal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCepPasseNormal_MaskInputRejected);
             // 
             // txtNomeMaePasseNormal
             // 
@@ -857,7 +897,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(246, 228);
+            this.linkLabel1.Location = new System.Drawing.Point(244, 195);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(135, 13);
             this.linkLabel1.TabIndex = 39;
@@ -878,7 +918,7 @@
             // 
             this.txtNPasseNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNPasseNormal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNPasseNormal.Location = new System.Drawing.Point(609, 185);
+            this.txtNPasseNormal.Location = new System.Drawing.Point(606, 215);
             this.txtNPasseNormal.Name = "txtNPasseNormal";
             this.txtNPasseNormal.Size = new System.Drawing.Size(162, 26);
             this.txtNPasseNormal.TabIndex = 32;
@@ -887,17 +927,18 @@
             // 
             this.txtEnderecoPasseNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEnderecoPasseNormal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnderecoPasseNormal.Location = new System.Drawing.Point(181, 185);
+            this.txtEnderecoPasseNormal.Location = new System.Drawing.Point(178, 215);
             this.txtEnderecoPasseNormal.Name = "txtEnderecoPasseNormal";
             this.txtEnderecoPasseNormal.Size = new System.Drawing.Size(394, 26);
             this.txtEnderecoPasseNormal.TabIndex = 31;
+            this.txtEnderecoPasseNormal.TextChanged += new System.EventHandler(this.txtEnderecoPasseNormal_TextChanged);
             // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(581, 190);
+            this.label14.Location = new System.Drawing.Point(579, 225);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(22, 18);
             this.label14.TabIndex = 15;
@@ -919,7 +960,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 221);
+            this.label12.Location = new System.Drawing.Point(15, 193);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 18);
             this.label12.TabIndex = 11;
@@ -930,11 +971,12 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 190);
+            this.label11.Location = new System.Drawing.Point(15, 225);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 18);
             this.label11.TabIndex = 10;
             this.label11.Text = "Endereço residencial:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -1068,43 +1110,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // cbxSemestrePasseNormal
-            // 
-            this.cbxSemestrePasseNormal.FormattingEnabled = true;
-            this.cbxSemestrePasseNormal.Items.AddRange(new object[] {
-            "1° semestre/período",
-            "2° semestre/período",
-            "3° semestre/período",
-            "4° semestre/período",
-            "5° semestre/período",
-            "6° semestre/período",
-            "7° semestre/período",
-            "8° semestre/período",
-            "9° semestre/período",
-            "10°  semestre/período"});
-            this.cbxSemestrePasseNormal.Location = new System.Drawing.Point(582, 52);
-            this.cbxSemestrePasseNormal.Name = "cbxSemestrePasseNormal";
-            this.cbxSemestrePasseNormal.Size = new System.Drawing.Size(189, 21);
-            this.cbxSemestrePasseNormal.TabIndex = 61;
-            // 
-            // txtDataExpedicaoPasseLivre
-            // 
-            this.txtDataExpedicaoPasseLivre.Location = new System.Drawing.Point(525, 84);
-            this.txtDataExpedicaoPasseLivre.Mask = "00/00/0000";
-            this.txtDataExpedicaoPasseLivre.Name = "txtDataExpedicaoPasseLivre";
-            this.txtDataExpedicaoPasseLivre.Size = new System.Drawing.Size(246, 20);
-            this.txtDataExpedicaoPasseLivre.TabIndex = 89;
-            this.txtDataExpedicaoPasseLivre.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtDataNascimentoPasseLivre
-            // 
-            this.txtDataNascimentoPasseLivre.Location = new System.Drawing.Point(177, 114);
-            this.txtDataNascimentoPasseLivre.Mask = "00/00/0000";
-            this.txtDataNascimentoPasseLivre.Name = "txtDataNascimentoPasseLivre";
-            this.txtDataNascimentoPasseLivre.Size = new System.Drawing.Size(252, 20);
-            this.txtDataNascimentoPasseLivre.TabIndex = 90;
-            this.txtDataNascimentoPasseLivre.ValidatingType = typeof(System.DateTime);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1114,6 +1119,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();

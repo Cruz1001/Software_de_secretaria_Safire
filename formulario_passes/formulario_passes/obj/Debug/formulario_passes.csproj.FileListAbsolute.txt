@@ -18,3 +18,17 @@ C:\Users\Vinicius Cruz\Desktop\Safire\Software_de_secretaria_Safire\formulario_p
 C:\Users\Vinicius Cruz\Desktop\Safire\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.CoreCompileInputs.cache
 C:\Users\Vinicius Cruz\Desktop\Safire\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.exe
 C:\Users\Vinicius Cruz\Desktop\Safire\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.pdb
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.AssemblyReference.cache
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.SuggestedBindingRedirects.cache
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.Form1.resources
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.Properties.Resources.resources
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.GenerateResource.cache
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.CoreCompileInputs.cache
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.exe
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.pdb
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\bin\Debug\formulario_passes.exe.config
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\bin\Debug\formulario_passes.exe
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\bin\Debug\formulario_passes.pdb
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\bin\Debug\Newtonsoft.Json.dll
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\bin\Debug\Newtonsoft.Json.xml
+D:\FATEC\SAFIRE\Software_de_secretaria_Safire\formulario_passes\formulario_passes\obj\Debug\formulario_passes.csproj.CopyComplete

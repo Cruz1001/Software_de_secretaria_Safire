@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace formulario_passes
 {
@@ -368,6 +371,47 @@ namespace formulario_passes
             {
                 cadastro = "Revalidação SPTRANS";
             }
+        }
+
+        private void txtCepPasseNormal_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://viacep.com.br/ws/" + txtCepPasseNormal.Text + "/json/");
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                AddressClass r = JsonConvert.DeserializeObject<AddressClass>(content);
+
+                txtEnderecoPasseNormal.Text = r.logradouro + "," + r.bairro + "," + r.localidade;
+
+        }
+
+        private void txtEnderecoPasseNormal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCEPPasseLivre_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://viacep.com.br/ws/" + txtCepPasseNormal.Text + "/json/");
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            AddressClass r = JsonConvert.DeserializeObject<AddressClass>(content);
+
+            txtEnderecoPasseLivre.Text = r.logradouro + "," + r.bairro + "," + r.localidade;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
