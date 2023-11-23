@@ -160,7 +160,7 @@ namespace formulario_passes
             }
             try
             {
-                string pasta = Application.StartupPath + @"\BD\BDSafire.accdb";
+                string pasta = Path.Combine(Application.StartupPath, @"C:\Safire\Software_de_secretaria_Safire\BD\BDSafire.accdb");
                 OleDbConnection conexao = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pasta);
                 conexao.Open();
 
