@@ -52,10 +52,7 @@ namespace consulta_secretaria
             {
                 conexao.Open();
 
-                string query = "SELECT FormularioLivre.ID AS ID_Livre, FormularioMeia.ID AS ID_Meia, " +
-               "FormularioLivre.*, FormularioMeia.* " +
-               "FROM FormularioLivre " +
-               "INNER JOIN FormularioMeia ON FormularioLivre.ID = FormularioMeia.ID";
+                string query = "SELECT* FROM FormularioLivre";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(query, conexao);
                 System.Data.DataTable dataTable = new System.Data.DataTable();
                 adapter.Fill(dataTable);
