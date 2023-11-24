@@ -43,7 +43,7 @@ namespace consulta_secretaria
         private void button1_Click(object sender, EventArgs e) //botão procurar
         {
 
-            string BDSafire = @"C:\Safire\Software_de_secretaria_Safire\BD\BDSafire.accdb";
+            string BDSafire = @"C:\Safire\BD\BDSafire.accdb";
             string conectar = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={BDSafire};Persist Security Info=False;";
 
             OleDbConnection conexao = new OleDbConnection(conectar);
@@ -56,7 +56,7 @@ namespace consulta_secretaria
 
                 if (!string.IsNullOrEmpty(labelAluno.Text))
                 {
-                    query += " WHERE Nome LIKE ?";
+                    query += " WHERE Nome LIKE ?"; 
                 }
 
                 OleDbCommand cmd = new OleDbCommand(query, conexao);
