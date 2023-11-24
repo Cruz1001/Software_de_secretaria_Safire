@@ -24,7 +24,15 @@ namespace consulta_secretaria
 
         private void enviarButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(boxJustificativa.Text == "")
+            {
+                MessageBox.Show("Por favor, informe uma justificativa.");
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
     }
 }
